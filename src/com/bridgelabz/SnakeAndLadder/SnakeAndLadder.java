@@ -32,16 +32,21 @@ public class SnakeAndLadder
 
               case LADDER:
                   positionA += dice;
+                  if(positionA > MAX_POSITION) {
+                      positionA = positionA-dice;
+                  }
                   break;
 
               case SNAKE:
                   positionA -= dice;
-                  if(positionA < MIN_POSITION )
+                  if(positionA < MIN_POSITION ) {
                       positionA = 0;
+                  }
                   break;
           }
-          System.out.println("end : "+positionA);
+          // System.out.println("end : "+positionA);
       }
 
-  }//System.out.println(startPositionA);
+  }
+
 }
